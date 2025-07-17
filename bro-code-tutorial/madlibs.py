@@ -1,21 +1,19 @@
 #THIS IS A PROGRAM WHICH WILL CREATE "NEW" STORIES BY FILLING IN BLOVKS WITH RANDOM ADJECTIVES
 import random
 
-storyblank='''A Chaotic Zoo Day
+'''storyblank=A Chaotic Zoo Day
 One morning, Gerald, a ___ zookeeper, arrived at the ___ Metropolis Zoo in his ___, ___ uniform. The day was ___ bizarre.
 He checked the ___ flamingos, dancing ___. A ___ monkey, Marvin, stole his ___ clipboard, tossing it into the ___ penguin pool. The ___ penguins glared as Gerald retrieved it, now ___.
 A ___ roar led Gerald to a ___ tourist feeding ___ marshmallows to ___ lions. Gerald confiscated them, dodging a ___ lion’s claws.
 At lunch, the ___ cafeteria served ___ soup. Gerald chose a ___ sandwich, but a ___ raccoon stole it.
 By afternoon, a ___ ostrich nabbed a ___ megaphone, squawking ___ noises. A ___ sloth triggered the ___ sprinklers, soaking the ___ crowd.
 At sunset, Gerald sat on a ___ bench, his ___ shoes squelching. “What a ___ day,” he laughed, watching Marvin juggle ___ bananas. Gerald loved his ___ job, ready for another ___ adventure.'''
-
-
-list_of_adjectives=["bewildered", "vast", "frayed", "ketchup-smeared", "erratic", "wildly", "showy", "choreographed", "rosy-plumed", "slightly", "bristly", "naughty", "squeaky", "treasured", "fuzzy", "agile", "verdant", "tropical", "wicked", "muddy", "toddling", "frosty", "drenched", "fishy", "booming", "regal", "oblivious", "sparkly", "puzzled", "ravenous", "tired", "syrupy", "cranky", "jagged", "oddball", "lime-glowing", "toxic", "moldy", "sly", "hectic", "tornado", "bizarre", "frenzied", "glossy", "gibberish", "drowsy", "wobbly", "rusty", "unaware", "icy", "radiant", "bumpy", "squishy", "fantastically", "swiped", "slick", "relentless", "quirky", "thrilling"]
+list_of_adjectives=["bewildered", "vast", "frayed", "smeared", "erratic", "wild", "showy", "choreographed", "plumed", "slight", "bristly", "naughty", "squeaky", "treasured", "fuzzy", "agile", "verdant", "tropical", "wicked", "muddy", "toddling", "frosty", "drenched", "fishy", "booming", "regal", "oblivious", "sparkly", "puzzled", "ravenous", "tired", "syrupy", "cranky", "jagged", "oddball", "glowing", "toxic", "moldy", "sly", "hectic", "tornado", "bizarre", "frenzied", "glossy", "gibberish", "drowsy", "wobbly", "rusty", "unaware", "icy", "radiant", "bumpy", "squishy", "fantastic", "swiped", "slick", "relentless", "quirky", "thrilling", "shimmering", "tangled", "velvety", "scorching", "whimsical", "cluttered", "dazzling", "murky", "sprightly", "gnarled", "zesty", "cavernous", "plush", "rickety", "smoldering", "ethereal", "grimy", "jubilant", "warped", "buttery", "crackling", "somber", "twinkling", "gaudy", "slimy", "spirited", "hulking", "misty", "brazen", "craggy", "lustrous", "skittish", "pungent", "gilded", "lopsided", "vibrant", "sodden", "blistering", "pristine", "gleaming", "spiky"]
 dictionary={}
 b=1
 for i in range(1,60):
-    dictionary[f'adj{b}']=list_of_adjectives[random.randrange(0,59)]
-    b+=1
+    dictionary[f'adj{i}']=random.choice(list_of_adjectives)
+    
 
 
 print(f''' One sunny morning, Gerald, a {dictionary['adj1']} zookeeper, arrived at the {dictionary['adj2']} Metropolis Zoo. He wore his {dictionary['adj3']}, {dictionary['adj4']} uniform, ready for another {dictionary['adj5']} day. Little did he know, this day would be {dictionary['adj6']} bizarre.
